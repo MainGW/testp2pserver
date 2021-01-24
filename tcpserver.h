@@ -2,8 +2,8 @@
 #define TCPSERVER_H
 
 #include <QObject>
-
-class TcpServer
+#include "abstracttcpserver.h"
+class TcpServer:public AbstractTcpServer
 {
     Q_OBJECT
 public:

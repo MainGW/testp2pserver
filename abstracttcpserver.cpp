@@ -4,3 +4,17 @@ AbstractTcpServer::AbstractTcpServer(QObject *parent, int port):QTcpServer(paren
 {
 
 }
+AbstractTcpServer::~AbstractTcpServer()
+{
+
+}
+void AbstractTcpServer::NewConn(int sd)
+{
+
+}
+QTcpSocket *AbstractTcpServer::findSocket(unsigned short vna){
+
+}
+void AbstractTcpServer::OnDisconnected(unsigned short vna){
+
+}

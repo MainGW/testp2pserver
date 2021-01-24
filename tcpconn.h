@@ -12,9 +12,9 @@ public:
     ~TcpConn();
     TcpMeta meta;
 signals:
-    void virtual Disconnected(int)=0;
+    void Disconnected(int);
 protected slots:
-    void virtual OnDataRev()=0;
+    void OnDataRev();
     void OnSlotDisconnected();
 };
 

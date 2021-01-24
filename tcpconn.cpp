@@ -12,3 +12,8 @@ TcpConn::~TcpConn(){
 void TcpConn::OnSlotDisconnected(){
     emit Disconnected(this->socketDescriptor());
 }
+void TcpConn::OnDataRev(){
+    if(this->bytesAvailable()>0){
+
+    }
+}

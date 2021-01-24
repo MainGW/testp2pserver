@@ -22,7 +22,6 @@ QT_END_NAMESPACE
 using namespace tpkg;
 class TcpMeta
 {
-    Q_OBJECT
 public:
     TcpMeta();
     tpkgfull *makePack(tpkgtype, char *, unsigned short, unsigned short);

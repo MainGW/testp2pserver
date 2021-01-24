@@ -2,11 +2,9 @@
 #define TCPTOPSERVER_H
 
 #include <QMainWindow>
-
-QT_BEGIN_NAMESPACE
-namespace Ui { class TcpTopServer; }
-QT_END_NAMESPACE
-
+#include "tcpmeta.h"
+#include "abstracttcpserver.h"
+#include "ui_tcptopserver.h"
 class TcpTopServer : public QMainWindow
 {
     Q_OBJECT
@@ -14,8 +12,11 @@ class TcpTopServer : public QMainWindow
 public:
     TcpTopServer(QWidget *parent = nullptr);
     ~TcpTopServer();
-
+public slots:
+    void OnSlotOpenServer();
+    void OnServerUpdate(tpkg::tpkgfull *, int);
 private:
     Ui::TcpTopServer *ui;
+    AbstractTcpServer *server;
 };
 #endif // TCPTOPSERVER_H

@@ -5,6 +5,7 @@
 #include <QTcpServer>
 #include <QPair>
 #include <QList>
+#include <QSqlDatabase>
 #include "tcpconn.h"
 
 class AbstractTcpServer:public QTcpServer
@@ -17,10 +18,12 @@ public:
     typedef enum{
         updatename=0, updatedbgmsg, removename
     }opersm;
+    TcpMeta meta;
+    QSqlDatabase serverdb;
 signals:
-    void UpdateServer(tpkgfull *, int, opersm);
+    void UpdateServer(tpkgfull *, int);
 private slots:
-    void OnDisconnected(unsigned short);
+    void OnDisconnected(int);
     QTcpSocket *findSocket(unsigned short);
 protected:
     void NewConn(int);

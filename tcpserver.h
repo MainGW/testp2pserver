@@ -8,6 +8,7 @@ class TcpServer:public AbstractTcpServer
     Q_OBJECT
 public:
     TcpServer();
+
 };
 
 #endif // TCPSERVER_H
